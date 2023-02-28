@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/kendo.common-material.min.css">
+    <link rel="stylesheet" href="css/kendo.material-main.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+    <script src="js/project.js"></script>
+</head>
+<body>
+    <div id="grid"></div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#grid").kendoGrid({
+            dataSource: {
+                data: products,
+                schema: {
+                    model: {
+                        fields: {
+                            ProductName: { type: "string" },
+                            UnitPrice: { type: "number" },
+                            UnitsInStock: { type: "number" },
+                            Discontinued: { type: "boolean" }
+                        }
+                    }
+                },
+                pageSize: 20
+            },
+            height: 550,
+            scrollable: true,
+            sortable: true,
+            filterable: true,
+            pageable: {
+                input: true,
+                numeric: false
+            },
+            columns: [
+                "ProductName",
+                { field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "130px" },
+                { field: "UnitsInStock", title: "Units In Stock", width: "130px" },
+                { field: "Discontinued", width: "130px" }
+            ]
+        });
+    });
+    
+    /*
+    var dataSource = new kendo.data.DataSource({
+        data: data,
+        filter: [
+            // leave data items which are "Beverage" and not "Coffee"
+            { field: "category", operator: "eq", value: "Beverages" },
+            { field: "name", operator: "neq", value: "Coffee" }
+        ]
+    });
+    dataSource.fetch(function(){
+        var view = dataSource.view();
+        view.forEach(function(item) {
+            $("#filtered").append("name - " + item.name + ", category - " + item.category + "<br>");
+        });
+    });
+
+    data.forEach(function(item) {
+        $("#non-filtered").append("name - " + item.name + ", category - " + item.category + "<br>");
+    });
+    */
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Charset -> Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8">
+    <!-- Name="viewpoint" -> 
+         Setting the viewport to make your website look good on all devices
+         And there are some attributes can be used in viewpoint :
+             1. width : 
+                    Set the width of screen
+             2. hight : 
+                    Set the heigth of screen
+             3. initial-scale : 
+                    Set the initial zoom ratio of the screen
+             4. minimum-scale : 
+                    Set the initial minimum zoom ratio of the screen
+             5. maximum-scale : 
+                    Set the initial maximum zoom ratio of the screen
+             6. user-scaleable : 
+                    Whether to allow the user to change the zoom ratio 
+        -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Http-equiv -> 
+         Provides an HTTP header for the information/value of the content attribute 
+         Some attributes : 
+             1. content-security-policy
+             2. content-type
+             3. default-style
+             4. refresh
+
+         And This itinerary refers to the standard mode of which version of IE is used.
+         But now IE has been eliminated, so it is not bad not to add it.
+
+         ***Note***
+            About content="ie=edge", The edge here does not refer to the edge browser but to the random version.
+        -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- The <link> tag defines the relationship between the current document and an external resource.
+         And it is most often used to link to external style sheets or to add a favicon to your website.
+         Then, if element is an empty element, it contains attributes only. 
+        -->
+    <link rel="stylesheet" href="./Css/kendo.common-material.min.css">
+    <link rel="stylesheet" href="./Css/kendo.material-main.min.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <style>
+        /* The curly braces contain what is added before the item of class="require"  
+         * ***Note***
+         *  .require -> . means class selector and require is the class which being selected
+         *  :before -> before the selector
+         *  .required:before -> before the class "require"
+         */
+        .required:before {
+          content:"*";
+          color: red;
+        }
+    </style>
+
+    <!-- The <title> tag defines the title of the document. 
+         The title must be text-only, and it is shown in the browser's title bar or in the page's tab. 
+        -->
+    <title>圖書館</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-nav">
+            <h1 class="navbar-title">圖書管理系統</h1>
+        </nav>
+    </header>
+</body>
+
+</html>

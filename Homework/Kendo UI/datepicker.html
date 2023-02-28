@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/kendo.common-material.min.css">
+    <link rel="stylesheet" href="css/kendo.material-main.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+    <script src="js/project.js"></script>
+</head>
+<body>
+    <input id="datepicker" />
+</body>
+<script>
+    $(document).ready(function () {
+        $("#datepicker").kendoDatePicker({
+            format: "yyyy/MM/dd",
+            dateInput: true
+        });
+    });
+</script>
+</html>

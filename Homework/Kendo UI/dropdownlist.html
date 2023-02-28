@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/kendo.common-material.min.css">
+    <link rel="stylesheet" href="css/kendo.material-main.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+    <script src="js/project.js"></script>
+</head>
+<body>
+    <input id="color" value="1" />
+</body>
+<script>
+    $(document).ready(function () {
+        var data = [
+            { text: "Black", value: "1" },
+            { text: "Orange", value: "2" },
+            { text: "Grey", value: "3" }
+        ];
+        
+        $("#color").kendoDropDownList({
+            dataTextField: "text",
+            dataValueField: "value",
+            dataSource: data,
+            index: 0
+        });
+    });
+</script>
+</html>
